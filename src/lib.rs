@@ -30,14 +30,7 @@
 //! ```
 //!
 
-#[cfg(not(any(feature = "egui26", feature = "egui27")))]
-compile_error!("at least one egui version must be enabled");
-
-#[cfg(feature = "egui26")]
-use egui26 as egui;
-#[cfg(feature = "egui27")]
-use egui27 as egui;
-
+use egui28 as egui;
 use egui::{epaint, style};
 
 mod themes;
